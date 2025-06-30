@@ -1,9 +1,8 @@
 <script setup>
-// dengan menggunakan script setup kita tidak perlu mendeklarasikan export default & setup() secara manual
-
 import ProductCard from "@/components/ProductCard.vue";
 import useFetch from "@/composables/useFetch";
 
+// Composeable
 const { products, loading, fetchProducts } = useFetch();
 
 fetchProducts();
