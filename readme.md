@@ -14,9 +14,9 @@ Composable dapat diekspor dengan menggunakan 2 cara yaitu :
 - `export` = bisa mengekspor beberapa composable, importnya harus sesuai dengan nama yang diekspor dengan cara destructuring.
 
 ## Composable vs Pinia
-**Composable** lebih cocok digunakan untuk mengelola state yang bersifat lokal, sedangkan **Pinia** lebih cocok digunakan untuk mengelola state yang bersifat global. 
+**Composeable** digunakan untuk mengelola state & logic yang bersifat reusable , tetapi perubahannya tetap secara lokal di dalam komponen yang menggunakannya. Contohnya digunakan untuk mengambil data dari API, mengelola form, dan lain-lain. Perubahan state di dalam composable tidak akan mempengaruhi komponen lain yang tidak menggunakan composable tersebut.
 
-**Composable** juga lebih fleksibel dan dapat digunakan di dalam komponen manapun, sedangkan **Pinia** lebih terstruktur dan lebih mudah digunakan untuk mengelola state yang bersifat global.
+**Pinia** digunakan untuk mengelola state & logic yang bersifat global, perubahannya dilakukan didalam store sehingga bersifat global. Contohnya digunakan untuk mengelola state yang digunakan di beberapa komponen, seperti user authentication, theme, dan lain-lain. Perubahan state di dalam store akan mempengaruhi semua komponen yang menggunakan store tersebut.
 
 ## Demo 
 Dalam demo ini kita akan menggunakan composable untuk mengambil data dari API
